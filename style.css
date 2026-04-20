@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #0f172a; /* 거의 저 사이트 느낌 */
+  color: #cbd5f5;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* 표준 */
+}
+
+.gradient-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    600px at var(--x) var(--y),
+    rgba(59, 130, 246, 0.15),
+    transparent 80%
+  );
+}
+
+.wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.myself {
+  width: 50%;
+  top: 0;
+  padding: 36px;
+  position: sticky;
+  box-sizing: border-box;
+}
+
+.contents {
+  width: 50%;
+  height: 100vh;
+  padding: 36px;
+  box-sizing: border-box;
+}
+
+.line {
+  width: 50px;
+  height: 1px;
+  background: #cbd5f54b;
+  transition: width 0.3s ease;
+}
+
+.tap-menu {
+  margin-top: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.menu span {
+  color: #cbd5f54b;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu:hover span {
+  color: #fff;
+}
+
+.menu:hover .line {
+  width: 80px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.con-box .desc {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.blod {
+  color: #fff;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    display: block;
+  }
+
+  .myself,
+  .contents {
+    width: 100%;
+  }
+
+  .contents {
+    height: 100%;
+  }
+}
