@@ -17,7 +17,7 @@ get_audio.addEventListener("click", () => {
 
   const audio = document.createElement("video");
 
-  audio.src = "/img/odd_ing.mp4"; // 경로 or URL
+  audio.src = "img/odd_ing.mp4"; // 경로 or URL
   audio.controls = true; // 재생 버튼 보이게
   audio_con.appendChild(audio);
   document.body.appendChild(div);
